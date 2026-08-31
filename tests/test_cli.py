@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 from typer.testing import CliRunner
@@ -70,4 +71,5 @@ def test_vivino_cli_requires_explicit_terms_acknowledgement(tmp_path: Path) -> N
     result = CliRunner().invoke(app, ["fetch-vivino", "--products", str(products)])
 
     assert result.exit_code != 0
-    assert "acknowledge-unofficial-source" in result.output
+    normalized_output = re.sub(r"\x1b\[[0-9;]*m|\s+", "", result.output)
+    assert "acknowledge-unofficial-source" in normalized_output
