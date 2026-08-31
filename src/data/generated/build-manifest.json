@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "2.0",
+  "dataset": "production-primary-with-sensitivity",
+  "generated": "src/data/generated/production-data.ts",
+  "sources": [
+    {
+      "path": "data/processed/research_dataset.csv",
+      "sha256": "100345aa30452cef3c72eb4e77df66b9a74d180c903556a19520c2b5372e0a3b"
+    },
+    {
+      "path": "data/processed/research_dataset_wine_level.csv",
+      "sha256": "e6ef0fce6f26a5aed106890fa5402c4baffb9a43ca19c3e3e41524e1a8ad6798"
+    },
+    {
+      "path": "data/raw/systembolaget/manifest.json",
+      "sha256": "1d2240f381e55360038230c90ba0689cbad0cdcdb5295bdd952facee064e516f"
+    }
+  ],
+  "outputSha256": "7b3ced2bd08c3af21e63b91362c67cb39bcb579f8c06eacd67fdfc2285300cff",
+  "displayRule": {
+    "minimumScoreCount": 10,
+    "minimumCoverage": 0.3
+  }
+}

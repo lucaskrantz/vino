@@ -1,0 +1,2 @@
+product_id,quality_score,scale_min,scale_max,score_source,observed_at,source_url
+REPLACE_WITH_SYSTEMBOLAGET_PRODUCT_ID,90,0,100,REPLACE_WITH_LICENSED_SOURCE,2025-03-08,https://example.invalid/score-record

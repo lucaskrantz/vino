@@ -1,0 +1,2 @@
+product_id,image_index,image_sha256,animal_presence,animal_names,taxon_groups,reviewer,reviewed_at,notes
+REPLACE_WITH_PRODUCT_ID,0,0000000000000000000000000000000000000000000000000000000000000000,present,fox,mammal,reviewer-id,2025-03-08T12:00:00Z,Confirmed on front label

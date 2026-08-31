@@ -1,0 +1,58 @@
+.challenge { position: relative; overflow: hidden; padding: clamp(5rem,10vw,9rem) var(--page-pad); color: #fffaf0; background: #c54027; }
+.tiles { position: absolute; inset: 0; opacity: .2; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.25) 1px,transparent 1px); background-size: 7rem 7rem; }
+.header,.gameGrid { position: relative; width: min(100%,82rem); margin-inline: auto; }
+.header { display: grid; grid-template-columns: 1.25fr .75fr; align-items: end; gap: 4rem; }
+.header > div > p,.searchKicker { color: #f1cf72; font-size: .62rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+.header h2 { margin-top: .7rem; font-size: clamp(3.6rem,8vw,7.2rem); letter-spacing: -.045em; line-height: .82; }
+.header > p { max-width: 28rem; padding-left: 1.2rem; border-left: 2px solid #f1cf72; color: #f4dcd2; font-size: .82rem; line-height: 1.65; }
+.gameGrid { display: grid; grid-template-columns: 1.12fr .88fr; margin-top: 4rem; border: 1px solid rgba(255,255,255,.5); background: #fffaf0; box-shadow: 14px 14px 0 rgba(86,27,18,.28); }
+.quizCard { min-height: 34rem; padding: clamp(1.4rem,4vw,3rem); color: #fffaf0; border-right: 1px solid rgba(255,255,255,.25); background: #0e3027; }
+.quizTop { display: flex; justify-content: space-between; padding-bottom: 1rem; color: #d5c8aa; border-bottom: 1px solid rgba(255,255,255,.25); font-size: .58rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.quizTop strong { color: #f1cf72; }
+.quizCard > h3 { max-width: 30rem; margin-top: 2.4rem; font-size: clamp(2rem,4vw,3.4rem); line-height: .95; }
+.duel { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.4rem; }
+.duel > i { position: absolute; top: 50%; left: 50%; z-index: 2; display: grid; width: 2.5rem; height: 2.5rem; place-items: center; color: #0e3027; border-radius: 50%; background: #f1cf72; font-family: var(--font-display); font-size: .8rem; font-style: normal; transform: translate(-50%,-50%) rotate(-6deg); }
+.duel button { display: flex; min-height: 12rem; align-items: center; justify-content: center; flex-direction: column; padding: 1.2rem; color: #fffaf0; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.04); cursor: pointer; transition: transform .18s ease,background .18s ease; }
+.duel button:hover { transform: translateY(-4px); background: rgba(255,255,255,.09); }
+.duel button[data-selected="true"] { outline: 2px solid #f1cf72; outline-offset: -4px; }
+.duel button[data-winner="true"] { color: #0e3027; background: #f1cf72; }
+.duel button span { font-size: .7rem; font-weight: 850; letter-spacing: .1em; text-align: center; text-transform: uppercase; }
+.duel button strong { margin-top: 1rem; font-family: var(--font-display); font-size: 2.8rem; font-weight: 400; line-height: 1; }
+.duel button small { margin-top: .65rem; color: inherit; font-size: .52rem; line-height: 1.35; opacity: .72; }
+.reveal { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.2rem; }
+.reveal p { display: flex; align-items: center; gap: .4rem; color: #d5c8aa; font-size: .6rem; line-height: 1.45; }
+.reveal button,.complete button { display: inline-flex; min-height: 2.5rem; align-items: center; gap: .45rem; padding: .5rem .75rem; color: #0e3027; border: 0; background: #f1cf72; font-size: .6rem; font-weight: 850; cursor: pointer; text-transform: uppercase; }
+.complete { display: grid; min-height: 27rem; place-content: center; justify-items: center; text-align: center; }
+.complete > p { margin-top: 1rem; color: #f1cf72; font-size: .62rem; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+.complete h3 { margin-top: .5rem; font-size: 3.5rem; }
+.complete > span { color: #d5c8aa; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.complete > div { display: flex; gap: .5rem; margin-top: 2rem; }
+.complete button + button { color: #fffaf0; border: 1px solid rgba(255,255,255,.4); background: transparent; }
+.searchCard { min-height: 34rem; padding: clamp(1.4rem,4vw,3rem); color: #3b261e; }
+.searchCard h3 { margin-top: .5rem; font-size: clamp(2rem,4vw,3rem); }
+.searchCard > p { margin-top: 1rem; color: #6c6059; font-size: .72rem; line-height: 1.55; }
+.searchCard form { margin-top: 2rem; }
+.searchCard form > label { display: block; margin-bottom: .45rem; font-size: .55rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+.searchCard form > div { display: grid; grid-template-columns: auto 1fr auto; align-items: center; border: 1px solid #3b261e; }
+.searchCard form svg { margin-left: .7rem; color: #c54027; }
+.searchCard input { min-width: 0; height: 3.2rem; padding: 0 .7rem; border: 0; outline: 0; background: transparent; }
+.searchCard form button { align-self: stretch; padding: 0 .9rem; color: #fffaf0; border: 0; background: #c54027; font-size: .6rem; font-weight: 850; cursor: pointer; text-transform: uppercase; }
+.searchError { padding: .6rem; color: #922f20 !important; background: #f4dcd2; }
+.searchResult { display: grid; grid-template-columns: 1fr auto; gap: .8rem 1rem; margin-top: 1rem; padding: 1rem; color: #fffaf0; background: #174b3b; }
+.searchResult span { color: #f1cf72; font-size: .5rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.searchResult h4 { margin-top: .15rem; font-family: var(--font-display); font-size: 1.55rem; font-weight: 400; }
+.searchResult > div > small { color: #d5c8aa; font-size: .52rem; }
+.searchResult > strong { font-family: var(--font-display); font-size: 2.4rem; font-weight: 400; line-height: 1; }
+.searchResult > strong small { font-family: var(--font-sans); font-size: .55rem; }
+.searchResult dl { grid-column: 1/-1; display: grid; grid-template-columns: repeat(3,1fr); margin: .4rem 0 0; border-top: 1px solid rgba(255,255,255,.2); }
+.searchResult dl div { padding-top: .55rem; }
+.searchResult dt { color: #d5c8aa; font-size: .48rem; letter-spacing: .08em; text-transform: uppercase; }
+.searchResult dd { margin: .1rem 0 0; font-size: .68rem; font-weight: 800; }
+.searchResult > p { grid-column: 1/-1; color: #d5c8aa; font-size: .55rem; line-height: 1.4; }
+.insufficient { grid-column: 1/-1; padding-top: .7rem; border-top: 1px solid rgba(255,255,255,.2); }
+.insufficient strong { color: #f1cf72; font-size: .68rem; }
+.insufficient p { margin-top: .35rem; color: #d5c8aa; font-size: .58rem; line-height: 1.45; }
+.fineprint { margin-top: 1.2rem !important; padding-top: 1rem; border-top: 1px solid #c9c2ab; font-size: .55rem !important; }
+@media(max-width:900px){.header{grid-template-columns:1fr}.gameGrid{grid-template-columns:1fr}.quizCard{border-right:0;border-bottom:1px solid #c9c2ab}}
+@media(max-width:600px){.challenge{padding-right:1rem;padding-left:1rem}.header h2{font-size:3.7rem}.gameGrid{margin-top:2.5rem}.quizCard,.searchCard{min-height:0}.duel button{min-height:10rem;padding:.7rem}.duel button strong{font-size:2.2rem}.reveal{align-items:stretch;flex-direction:column}.reveal button{justify-content:center}.complete>div{align-items:stretch;flex-direction:column}.searchResult dl{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){.duel button{transition:none}.duel button:hover{transform:none}}

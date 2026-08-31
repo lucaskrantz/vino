@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+dist/
+*.egg-info/
+
+# Frontend
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+npm-debug.log*
+
+# Credentials
+.env
+
+# Generated research data (keep directory placeholders and examples)
+data/raw/systembolaget/*
+!data/raw/systembolaget/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/images/*
+!data/images/.gitkeep
+data/external/*
+!data/external/*.example
+data/manual/*
+!data/manual/*.example
+reports/*
+!reports/.gitkeep
